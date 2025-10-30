@@ -1,6 +1,6 @@
 {
-  "name": "Real-Time SG Camera",
-  "description": "An augmented reality web application that uses AI to transform the camera's view in real-time based on user prompts.",
+  "name": "Something Ghoulish Photo Booth",
+  "description": "A spooky Halloween-themed photo booth that uses AI to transform your photos into ghoulish creations.",
   "requestFramePermissions": [
     "camera"
   ]

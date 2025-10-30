@@ -1,31 +1,21 @@
-# Real-Time AI Camera Transformation
+# Something Ghoulish Photo Booth
 
-Welcome to the Real-Time AI Camera Transformation project! This is an interactive web application that leverages the power of Google's Gemini API to transform your live camera feed based on your creative inputs. From applying artistic styles to swapping backgrounds or generating one-frame stories, this app showcases real-time, on-the-fly image manipulation with generative AI.
+Welcome to the Something Ghoulish Photo Booth! This is an interactive, Halloween-themed web application that leverages the power of Google's Gemini API to transform your live camera feed into spooky and hilarious creations. 
 
-[![Powered by Gemini](https://img.shields.io/badge/Powered%20by-Gemini-blue.svg)](https://ai.google.dev/)
-
----
-
-## 🚀 Live Demo
-
-You can view the live deployed application here:
-
-**[https://&lt;YOUR_GITHUB_USERNAME&gt;.github.io/&lt;YOUR_REPOSITORY_NAME&gt;/](https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPOSITORY_NAME>/)**
-
-*(Replace the placeholders with your GitHub username and repository name after deploying)*
+[![Powered by Gemini](https://img.shields.io/badge/Powered%20by-Gemini-orange.svg)](https://ai.google.dev/)
 
 ---
 
 ## ✨ Key Features
 
 - **Live Camera Transformation:** Uses your device's camera for an immersive, real-time experience.
-- **Three Creative Modes:**
-  - **Manual Prompt:** You're the artist. Describe any transformation you can imagine (e.g., "make it a vibrant cartoon," "turn the scene into a watercolor painting").
-  - **One Frame Story:** Provide a theme (e.g., "a forgotten memory") and let the AI create both a transformed visual and a short, imaginative narrative to go with it.
-  - **Background Swap:** Seamlessly replace your background with any image you choose, keeping people in the foreground perfectly segmented.
-- **Instant Results:** See the AI-generated image appear moments after you capture a photo.
+- **Three Spooky Modes:**
+  - **🎃 PUMPKIN ME!:** Transforms every person in the photo into a pumpkin-headed creature.
+  - **👻 Haunting:** Places you and your friends into a creepy, haunted scene like a graveyard or a haunted house.
+  - **🧛 Costume:** Instantly gives everyone in the photo a classic Halloween costume like a vampire, mummy, or Frankenstein's monster.
+- **Photo Gallery:** Automatically saves all your cursed creations in a gallery at the bottom of the page.
 - **Download Creations:** Save your favorite AI-transformed images directly to your device.
-- **Responsive Design:** A clean, modern UI that works beautifully on both desktop and mobile browsers.
+- **Responsive Design:** A spooky, modern UI that works beautifully on both desktop and mobile browsers.
 
 ---
 
@@ -41,12 +31,11 @@ You can view the live deployed application here:
 
 The application follows a simple yet powerful workflow:
 
-1.  **Mode Selection:** The user chooses one of the three creative modes.
-2.  **Input:** Depending on the mode, the user either types a text prompt or uploads a background image.
-3.  **Capture Sequence:** The app starts a 3-second countdown and captures a single frame from the user's camera feed.
-4.  **API Request:** The captured frame (and background image, if applicable) is sent to the Gemini API along with a carefully constructed prompt.
-5.  **AI Processing:** Gemini processes the input and generates a new, transformed image (and a narrative in 'Director' mode).
-6.  **Display:** The transformed image is displayed in the "AI Transformed" view, ready for the user to download.
+1.  **Mode Selection:** The user clicks one of the three spooky transformation buttons.
+2.  **Capture Sequence:** The app starts a 3-second countdown and captures a single frame from the user's camera feed.
+3.  **API Request:** The captured frame is sent to the Gemini API along with a carefully constructed prompt based on the selected mode.
+4.  **AI Processing:** Gemini processes the input and generates a new, transformed image.
+5.  **Display & Save:** The transformed image is displayed in the "CURSED" view and simultaneously added to the photo gallery at the bottom of the screen.
 
 ---
 
@@ -68,11 +57,8 @@ This project is configured for a simple, no-build-step deployment, which is perf
     - Click **Save**.
 
 3.  **Access Your Site:**
-    - GitHub will generate and display a URL for your live site (e.g., `https://<your-username>.github.io/<your-repo-name>/`).
-    - It may take a few minutes for the site to become live. If you see a 404 error, wait a few minutes and refresh.
+    - GitHub will generate and display a URL for your live site. It may take a few minutes for the site to become live.
 
 ### A Note on the API Key
 
-This project is designed to run in an environment where the Gemini `API_KEY` is securely provided as an environment variable (`process.env.API_KEY`).
-
-When deploying to a static hosting service like GitHub Pages, there is no backend to securely store keys. This project is best suited for platforms (like Google AI Studio) that handle the injection of this key for you. If you are running this outside of such an environment, you will need to manage the API key's availability to the client-side code yourself.
+This project is designed to run in an environment where the Gemini `API_KEY` is securely provided as an environment variable (`process.env.API_KEY`), such as Google AI Studio.
